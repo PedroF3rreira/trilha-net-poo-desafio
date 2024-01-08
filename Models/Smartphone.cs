@@ -21,7 +21,7 @@ namespace DesafioPOO.Models
             {
                 if (value <= 0)
                 {
-                    throw new ArgumentException("O valor desse campo deve ser maior que zero.");
+                    throw new ArgumentException("O valor do campo memória deve ser maior que zero.");
                 }
                 _memoria = value;
             }
@@ -68,7 +68,7 @@ namespace DesafioPOO.Models
 
         public override string ToString()
         {
-            var infor = $"Modelo do celular: {Modelo}\n"
+            var infor = $"Modelo do celular: {Modelo.ToUpper()}\n"
                         + $"Numero do celular: {string.Format("{0:(##)#####-####}", 
                         Convert.ToInt64(Numero.Replace(" ",""))).Trim()}\n"
                         + $"IMEI do celular: {Imei.ToUpper()}\n"
